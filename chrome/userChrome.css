@@ -93,6 +93,12 @@ html:not([privatebrowsingmode="temporary"]) #sidebar-box {
   z-index: 1;
 }
 
+#sidebar-box[positionend]{ direction: rtl }
+#sidebar-box[positionend] > *{ direction: ltr }
+
+#sidebar-box[positionend]:-moz-locale-dir(rtl){ direction: ltr }
+#sidebar-box[positionend]:-moz-locale-dir(rtl) > *{ direction: rtl }
+
 html:not([privatebrowsingmode="temporary"])
   #main-window[sizemode="fullscreen"]
   #sidebar-box {
